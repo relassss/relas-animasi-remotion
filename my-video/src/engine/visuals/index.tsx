@@ -1,3 +1,4 @@
+import { PrCta } from "./PrCta";
 import { PrRekruterPalsu, PrCeoPalsuChat } from "./PrBinance2";
 import { PrTugasMalware, PrPerangkatTerpisah } from "./PrBinance3";
 import { PrCekResmi, PrRisiko } from "./PrBinance4";
@@ -92,6 +93,7 @@ const GarisWaktuLaporan: React.FC = () => (
 
 export const visualTerdaftar: Record<string, React.FC> = {
   "pr-lowongan-palsu": PrLowonganPalsu,
+  "pr-cta": PrCta,
   "pr-rekruter-palsu": PrRekruterPalsu,
   "pr-ceo-palsu-chat": PrCeoPalsuChat,
   "pr-tugas-berisi-malware": PrTugasMalware,

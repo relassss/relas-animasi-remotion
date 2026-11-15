@@ -1,6 +1,6 @@
 import React from "react";
 import { tema } from "../tema";
-import { Aks, Judul, LatarDiagram, Pill, PR, useMasuk } from "./PrKomponen";
+import { Aks, Judul, LatarDiagram, Pill, PR, useMasuk, Isi } from "./PrKomponen";
 
 const k = (v: number) => Math.max(0, Math.min(1, v));
 const W: React.CSSProperties = { position: "absolute", left: 0, top: 0, width: 1080, height: 1920, overflow: "hidden" };
@@ -18,6 +18,7 @@ export const PrRekruterPalsu: React.FC = () => {
         <br />
         <Aks>palsu</Aks>?
       </Judul>
+      <Isi skala={1.0} oy={70}>
       <svg viewBox="0 0 1080 1920" style={S}>
         <g opacity={m} transform={`translate(0 ${(1 - m) * 40})`}>
           <rect x="140" y="600" width="760" height="330" rx="28" fill="#F6F8FB" />
@@ -34,7 +35,8 @@ export const PrRekruterPalsu: React.FC = () => {
           <path d="M-16 0 L-5 12 L16 -12" stroke={PR.navy} strokeWidth="7" fill="none" strokeLinecap="round" strokeLinejoin="round" />
         </g>
       </svg>
-      <Pill x={640} y={520} tx={790} ty={660} teks="tampak nyata" delay={55} gelap={false} />
+      <Pill x={200} y={520} tx={260} ty={672} teks="tampak nyata" delay={55} gelap={false} />
+      </Isi>
     </div>
   );
 };
@@ -52,6 +54,7 @@ export const PrCeoPalsuChat: React.FC = () => {
         <br />
         dadakan
       </Judul>
+      <Isi skala={1.15} oy={20}>
       <svg viewBox="0 0 1080 1920" style={S}>
         <g opacity={m} transform={`translate(0 ${(1 - m) * 40})`}>
           <rect x="330" y="580" width="420" height="540" rx="44" fill="#0F1626" stroke="#fff" strokeWidth="6" />
@@ -70,7 +73,8 @@ export const PrCeoPalsuChat: React.FC = () => {
           <text x="460" y="886" fontFamily={f} fontSize="30" fontWeight="700" fill={PR.navy}>tugas.zip</text>
         </g>
       </svg>
-      <Pill x={700} y={520} tx={690} ty={640} teks="CEO palsu" delay={75} gelap={false} />
+      <Pill x={640} y={520} tx={690} ty={640} teks="CEO palsu" delay={75} gelap={false} />
+      </Isi>
     </div>
   );
 };

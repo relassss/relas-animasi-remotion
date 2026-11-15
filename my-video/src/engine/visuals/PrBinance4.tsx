@@ -1,6 +1,6 @@
 import React from "react";
 import { tema } from "../tema";
-import { Aks, Judul, LatarDiagram, Pill, PR, useMasuk } from "./PrKomponen";
+import { Aks, Judul, LatarDiagram, Pill, PR, useMasuk, Isi } from "./PrKomponen";
 
 const k = (v: number) => Math.max(0, Math.min(1, v));
 const W: React.CSSProperties = { position: "absolute", left: 0, top: 0, width: 1080, height: 1920, overflow: "hidden" };
@@ -25,6 +25,7 @@ export const PrCekResmi: React.FC = () => {
         <br />
         <Aks>resmi</Aks>
       </Judul>
+      <Isi skala={1.0} oy={80}>
       <svg viewBox="0 0 1080 1920" style={S}>
         <g opacity={m} transform={`translate(0 ${(1 - m) * 40})`}>
           <rect x="140" y="600" width="800" height="420" rx="28" fill="#F6F8FB" />
@@ -46,6 +47,7 @@ export const PrCekResmi: React.FC = () => {
         ))}
       </svg>
       <Pill x={640} y={520} tx={790} ty={633} teks="jalur resmi" delay={80} gelap={false} />
+      </Isi>
     </div>
   );
 };
@@ -62,6 +64,7 @@ export const PrRisiko: React.FC = () => {
         <br />
         <Aks>jaminan</Aks>
       </Judul>
+      <Isi skala={1.25} oy={30}>
       <svg viewBox="0 0 1080 1920" style={S}>
         <g opacity={m} transform={`translate(540 800) scale(${0.85 + 0.15 * m}) translate(-540 -800)`}>
           <path d="M540 600 L710 668 V820 Q710 930 540 1010 Q370 930 370 820 V668 Z" fill={PR.teal} stroke="#fff" strokeWidth="6" strokeLinejoin="round" />
@@ -69,7 +72,8 @@ export const PrRisiko: React.FC = () => {
         </g>
         <path d="M430 770 L650 880" stroke="#E5484D" strokeWidth="14" strokeLinecap="round" opacity={s} strokeDasharray="260" strokeDashoffset={(1 - s) * 260} />
       </svg>
-      <Pill x={640} y={1040} tx={600} ty={850} teks="kurangi risiko" delay={70} />
+      <Pill x={560} y={1040} tx={600} ty={850} teks="kurangi risiko" delay={70} />
+      </Isi>
     </div>
   );
 };

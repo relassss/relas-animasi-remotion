@@ -47,7 +47,7 @@ export const PrLowonganPalsu: React.FC = () => {
           <path d={`M65 ${196 + goyang} V${250 + goyang} M40 ${226 + goyang} L65 ${253 + goyang} L90 ${226 + goyang}`} stroke={PR.teal} strokeWidth="8" fill="none" strokeLinecap="round" strokeLinejoin="round" />
         </g>
       </svg>
-      <Pill x={700} y={690} tx={840} ty={762} teks="tugas coding" delay={70} />
+      <Pill x={715} y={690} tx={840} ty={762} teks="tugas coding" delay={70} />
     </div>
   );
 };

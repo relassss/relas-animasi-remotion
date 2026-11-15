@@ -123,3 +123,9 @@ export const RuangLatar: React.FC = () => (
     <rect x="740" y="1500" width="120" height="14" rx="7" fill="#E5C9A0" />
   </svg>
 );
+
+export const Isi: React.FC<{ skala?: number; oy?: number; children: React.ReactNode }> = ({ skala = 1, oy = 0, children }) => (
+  <div style={{ position: "absolute", left: 0, top: 0, width: 1080, height: 1920, transform: `translateY(${oy}px) scale(${skala})`, transformOrigin: "540px 800px" }}>
+    {children}
+  </div>
+);

@@ -1,7 +1,7 @@
 import React from "react";
 import { useCurrentFrame } from "remotion";
 import { tema } from "../tema";
-import { Aks, Judul, LatarDiagram, Pill, PR, useMasuk } from "./PrKomponen";
+import { Aks, Judul, LatarDiagram, Pill, PR, useMasuk, Isi } from "./PrKomponen";
 
 const k = (v: number) => Math.max(0, Math.min(1, v));
 const W: React.CSSProperties = { position: "absolute", left: 0, top: 0, width: 1080, height: 1920, overflow: "hidden" };
@@ -29,6 +29,7 @@ export const PrTugasMalware: React.FC = () => {
         <br />
         <Aks>malware</Aks>
       </Judul>
+      <Isi skala={1.15} oy={50}>
       <svg viewBox="0 0 1080 1920" style={S}>
         <g opacity={m}>
           <Berkas x={160} y={720} />
@@ -45,6 +46,7 @@ export const PrTugasMalware: React.FC = () => {
         </g>
       </svg>
       <Pill x={600} y={1020} tx={630} ty={830} teks="program jahat" delay={70} />
+      </Isi>
     </div>
   );
 };
@@ -63,6 +65,7 @@ export const PrPerangkatTerpisah: React.FC = () => {
         <br />
         <Aks>terpisah</Aks>
       </Judul>
+      <Isi skala={1.0} oy={70}>
       <svg viewBox="0 0 1080 1920" style={S}>
         <g opacity={a}>
           <rect x="130" y="700" width="340" height="240" rx="18" fill={PR.navy2} stroke="#fff" strokeWidth="6" />
@@ -85,6 +88,7 @@ export const PrPerangkatTerpisah: React.FC = () => {
       </svg>
       <Pill x={130} y={1010} tx={300} ty={955} teks="laptop kerja" delay={60} />
       <Pill x={640} y={1010} tx={780} ty={955} teks="perangkat uji" delay={75} />
+      </Isi>
     </div>
   );
 };
