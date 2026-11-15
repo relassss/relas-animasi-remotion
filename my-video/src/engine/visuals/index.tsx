@@ -1,3 +1,7 @@
+import { PrRekruterPalsu, PrCeoPalsuChat } from "./PrBinance2";
+import { PrTugasMalware, PrPerangkatTerpisah } from "./PrBinance3";
+import { PrCekResmi, PrRisiko } from "./PrBinance4";
+import { PrLowonganPalsu } from "./PrBinance";
 import { VisualBinanceV3 } from "./SpekBinance";
 import { VisualBinanceV2 } from "./VisualBinanceV2";
 import { VisualBinance2D2 } from "./VisualBinance2D2";
@@ -87,6 +91,13 @@ const GarisWaktuLaporan: React.FC = () => (
 );
 
 export const visualTerdaftar: Record<string, React.FC> = {
+  "pr-lowongan-palsu": PrLowonganPalsu,
+  "pr-rekruter-palsu": PrRekruterPalsu,
+  "pr-ceo-palsu-chat": PrCeoPalsuChat,
+  "pr-tugas-berisi-malware": PrTugasMalware,
+  "pr-perangkat-terpisah": PrPerangkatTerpisah,
+  "pr-cek-resmi": PrCekResmi,
+  "pr-risiko-bukan-jaminan": PrRisiko,
   laut: LautTenang,
   "kapal-selam": KapalSelam,
   angkasa: Angkasa,

@@ -1,0 +1,36 @@
+{
+  "jenis": "short",
+  "nama": "binance-reels-pr",
+  "judul": "Lamaran Kerja Palsu yang Membuka Jalan ke Binance",
+  "cta": "Video lengkapnya ada di YouTube Yakali Lu Tau. Berlangganan di @yakalilutau dan nyalakan lonceng.",
+  "scenes": [
+    {
+      "visual": "pr-lowongan-palsu",
+      "teks": "Kamu dapat tawaran kerja bagus. Lalu disuruh mengunduh tugas coding."
+    },
+    {
+      "visual": "pr-rekruter-palsu",
+      "teks": "Menurut laporan Binance, begitulah salah satu insinyurnya didekati. 'HR' palsu menunjukkan akun yang tampak nyata."
+    },
+    {
+      "visual": "pr-ceo-palsu-chat",
+      "teks": "Lalu 'CEO' palsu menyuruhnya mengunduh tugas coding lewat chat."
+    },
+    {
+      "visual": "pr-tugas-berisi-malware",
+      "teks": "Isinya malware, yaitu program jahat yang diam-diam menguasai laptop."
+    },
+    {
+      "visual": "pr-perangkat-terpisah",
+      "teks": "Maksudnya begini: kalau ada yang menyuruh menjalankan kode asing, jangan di laptop kerja. Uji di perangkat terpisah."
+    },
+    {
+      "visual": "pr-cek-resmi",
+      "teks": "Dan cek perusahaannya lewat jalur resmi."
+    },
+    {
+      "visual": "pr-risiko-bukan-jaminan",
+      "teks": "Ingat, tidak ada yang 100 persen aman. Langkah ini mengurangi risiko, bukan menjaminnya."
+    }
+  ]
+}

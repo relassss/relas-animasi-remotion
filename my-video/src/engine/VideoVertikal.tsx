@@ -9,6 +9,7 @@ import { SubtitleVertikal } from "./SubtitleVertikal";
 import { SFX, berkasSfx } from "./sfx";
 import { ambilVisual } from "./visuals";
 import { ZONA } from "./zona";
+import { Watermark } from "./Watermark";
 
 const klem = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
 const EKOR = 15;
@@ -59,6 +60,7 @@ export const VideoVertikal: React.FC<{ data: TopikData; potongan?: number }> = (
   const daftar = daftarScene(data, potongan);
   const { jadwal, total } = hitungVertikal(data, potongan);
   const frame = useCurrentFrame();
+  const adaPr = daftar.some((sc, i) => (sc.visual || "").startsWith("pr-") && frame >= jadwal[i].mulai && frame < jadwal[i].mulai + jadwal[i].dur);
 
   return (
     <AbsoluteFill style={{ backgroundColor: "#000" }}>
@@ -76,9 +78,9 @@ export const VideoVertikal: React.FC<{ data: TopikData; potongan?: number }> = (
                 style={{
                   position: "absolute",
                   left: 0,
-                  top: ZONA.jendelaY,
+                  top: (sc.visual || "").startsWith("pr-") ? 0 : ZONA.jendelaY,
                   width: ZONA.lebar,
-                  height: ZONA.jendelaT,
+                  height: (sc.visual || "").startsWith("pr-") ? ZONA.tinggi : ZONA.jendelaT,
                   overflow: "hidden",
                 }}
               >
@@ -93,7 +95,7 @@ export const VideoVertikal: React.FC<{ data: TopikData; potongan?: number }> = (
 
       <AbsoluteFill
         style={{
-          background:
+          opacity: adaPr ? 0.3 : 1, background:
             "linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 25%, rgba(0,0,0,0) 70%, rgba(0,0,0,0.6) 100%)",
         }}
       />
@@ -128,6 +130,8 @@ export const VideoVertikal: React.FC<{ data: TopikData; potongan?: number }> = (
           <SubtitleVertikal kata={sc.kata} />
         </Sequence>
       ))}
+
+      <Watermark />
 
       {data.musik ? (
         <Audio
