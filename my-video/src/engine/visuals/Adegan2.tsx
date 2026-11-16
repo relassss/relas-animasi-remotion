@@ -256,7 +256,7 @@ export const AjakanLangganan: React.FC = () => {
       <g opacity={masuk} transform={`translate(0 ${(1 - masuk) * 20})`}>
         <rect x={340} y={70} width={200} height={140} rx={38} fill="#ff4d4d" />
         <polygon points="418,108 418,172 474,140" fill="#ffffff" />
-        <T x={440} y={290} size={54} bold>Yakali Lu Tau</T>
+        <T x={440} y={290} size={54} bold>yakalilutau</T>
         <T x={440} y={338} size={32} fill={C.teal}>@yakalilutau</T>
         <rect x={230} y={392} width={320} height={86} rx={43} fill={sudah ? "#555b66" : "#ff4d4d"} />
         <circle cx={390} cy={435} r={riak * 150} fill="none" stroke="#ffffff" strokeWidth={4} opacity={(1 - riak) * 0.6 * (tekan > 0 ? 1 : 0)} />

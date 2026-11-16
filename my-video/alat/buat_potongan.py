@@ -48,9 +48,9 @@ def main():
                 kw = []
             waktu = bv.selaraskan(kata_naskah, kw, d)
             item["cta"] = {
-                "visual": "abstrak",
+                "visual": "ajakan-berlangganan",
                 "sfx": [],
-                "fokus": handle,
+                "fokus": "",
                 "angka": None,
                 "teks": p["cta"],
                 "audio": f"topik/cta-{idx + 1}.mp3",
