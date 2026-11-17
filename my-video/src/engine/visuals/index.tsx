@@ -1,3 +1,5 @@
+import {PenandaTetap, BarTumpuk, TeksHurufPerHuruf} from "./ElemenBaru";
+import {PilihanAkhir} from "./PilihanAkhir";
 import { PrCta } from "./PrCta";
 import { PrRekruterPalsu, PrCeoPalsuChat } from "./PrBinance2";
 import { PrTugasMalware, PrPerangkatTerpisah } from "./PrBinance3";
@@ -133,6 +135,10 @@ export const visualTerdaftar: Record<string, React.FC> = {
   "langkah-tautan": LangkahTautan,
   "langkah-lockdown": LangkahLockdown,
   "risiko-bukan-jaminan": RisikoBukanJaminan,
+"bar-tumpuk": BarTumpuk,
+"teks-huruf": TeksHurufPerHuruf,
+"penanda-tetap": PenandaTetap,
+"pilihan-akhir": PilihanAkhir,
   "ajakan-suka": AjakanSuka,
   "ajakan-komentar": AjakanKomentar,
   "ajakan-berlangganan": AjakanLangganan,
@@ -194,7 +200,7 @@ export const visualTerdaftar: Record<string, React.FC> = {
   "perangkat-terpisah-2d": VisualBinance2D2["perangkat-terpisah-2d"],
   "cek-resmi-2d": VisualBinance2D2["cek-resmi-2d"],
   "risiko-bukan-jaminan-2d": VisualBinance2D2["risiko-bukan-jaminan-2d"],
-  "brankas-kosong-v2": VisualBinanceV2["brankas-kosong-v2"],
+//   "brankas-kosong-v2": VisualBinanceV2["brankas-kosong-v2"],
   "jam-20-menit-v2": VisualBinanceV2["jam-20-menit-v2"],
   // v3-mulai
   "brankas-kosong-v2": VisualBinanceV3["brankas-kosong-v2"],
